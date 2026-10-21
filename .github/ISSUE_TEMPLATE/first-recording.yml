@@ -1,0 +1,45 @@
+name: 첫 녹화 결과
+description: 첫 클립을 만들 때 무엇이 잘 됐고 막혔는지 알려주세요.
+title: "[첫 녹화] "
+body:
+  - type: markdown
+    attributes:
+      value: "공개 이슈입니다. 영상·스트림 키·비밀번호·결제정보·개인 경로를 올리지 마세요. 이 양식은 판매나 지원 SLA를 약속하지 않습니다."
+  - type: input
+    id: version
+    attributes:
+      label: ReelDock 버전
+      placeholder: 0.1.0-alpha.2
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Windows / GPU / 게임 또는 캡처 종류
+    validations:
+      required: true
+  - type: dropdown
+    id: success
+    attributes:
+      label: 첫 클립을 정상 저장하고 재생했나요?
+      options:
+        - "예, 화면과 필요한 소리가 정상입니다"
+        - "파일은 생겼지만 화면 또는 소리에 문제가 있습니다"
+        - "저장하지 못했습니다"
+    validations:
+      required: true
+  - type: input
+    id: elapsed
+    attributes:
+      label: 설치 후 첫 정상 클립까지 걸린 시간 (대략)
+  - type: textarea
+    id: friction
+    attributes:
+      label: 막힌 단계 / 기대한 동작 / 실제 동작
+    validations:
+      required: true
+  - type: dropdown
+    id: repeat
+    attributes:
+      label: 지난 7일 중 실제로 사용한 날짜 수 (선택)
+      options: ["0", "1", "2", "3", "4", "5", "6", "7"]
